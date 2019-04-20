@@ -64,6 +64,8 @@ else()
    set (BUILDING_PYTHON_IN_MSVC false)
 endif()
 
+add_definitions("-fPIC")
+set(CMAKE_POSITION_INDEPENDENT_CODE true)
 if (DLIB_IN_PROJECT_BUILD)
 
    # Check if we are being built as part of a pybind11 module. 
